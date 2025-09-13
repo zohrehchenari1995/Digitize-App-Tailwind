@@ -9,7 +9,7 @@
   <body class="bg-gray-100">
     <!--APP BAR-------------------------------------------------------------------  -->
     <div
-      class="container md:max-w-screen-md flex justify-between items-center mt-10 px-5 mb-6"
+      class="container md:hidden md:max-w-screen-md flex justify-between items-center mt-10 px-5 mb-6"
     >
       <div class="app-logo">logo</div>
       <div class="font-bold text-slate-800 text-lg">ساعت هوشمند</div>
@@ -36,26 +36,26 @@
 
     <!--FILTER-SORT----------------------------------------------------------------  -->
     <div
-      class="container md:max-w-screen-md flex justify-between items-center gap-x-4 px-5"
+      class="container md:hidden md:max-w-screen-md flex justify-between items-center gap-x-4 px-5 mb-9"
     >
       <div class="bg-white w-1/2 flex items-center py-3 pr-3 rounded">
-       <div>
-         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6 stroke-orange-600"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
-          />
-        </svg>
-       </div>
-       
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 stroke-orange-600"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+            />
+          </svg>
+        </div>
+
         <span class="mr-3 text-slate-800 text-sm font-medium">محبوب ترین</span>
       </div>
 
@@ -66,7 +66,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="size-6 stroke-gray-400 "
+          class="size-6 stroke-gray-400"
         >
           <path
             stroke-linecap="round"
@@ -76,6 +76,55 @@
         </svg>
         <span class="mr-3 text-slate-800 text-sm font-medium">فیلتر: اپل</span>
       </div>
+    </div>
+
+    <!--PRODUCTS--------------------------------------------------------------------- -->
+    <div
+      class="container grid grid-cols-2 gap-x-2 gap-y-9 md:grid-cols-3 lg:grid-cols-4 p-1"
+    >
+      <div class="bg-white p-2 rounded-md shadow-md">
+        <div
+          class="bg-gray-200 flex justify-center items-center mt-2 mb-4 p-8 rounded-md"
+        >
+          <img src="/assets/images/apple-watch-6-removebg-preview.png" alt="" />
+        </div>
+
+        <!-- description -->
+        <div class="flex justify-between items-center mb-3 w-full">
+          <div class="text-slate-400 font-medium text-sm md:text-lg">اپل</div>
+          <div>color palet</div>
+        </div>
+
+        <!-- title -->
+        <div
+          class="w-full flex items-center mb-2 text-slate-900 text-xs font-bold md:text-lg"
+        >
+          ساعت هوشمند اپل سری 6 
+        </div>
+        <div
+          class="flex justify-center items-center mb-3 text-orange-600 font-medium text-base md:text-xl"
+        >
+          ۱۲,۳۴۵,۶۷۰ تومان
+        </div>
+
+        <hr class="bg-slate-300" />
+
+        <div
+          class="w-full flex justify-center items-center mt-1  p-1 text-orange-600 font-bold font-base text-sm md:text-lg"
+        >
+          <button>مشاهده و سفارش</button>
+        </div>
+      </div>
+
+      <div class="bg-blue-200">2</div>
+      <div class="bg-blue-200">3</div>
+      <div class="bg-blue-200">4</div>
+      <div class="bg-blue-200">5</div>
+      <div class="bg-blue-200">6</div>
+      <div class="bg-blue-200">7</div>
+      <div class="bg-blue-200">8</div>
+      <div class="bg-blue-200">9</div>
+      <div class="bg-blue-200">10</div>
     </div>
   </body>
 </html>
