@@ -38,7 +38,7 @@
     <div
       class="container md:hidden md:max-w-screen-md flex justify-between items-center gap-x-4 px-5 mb-9"
     >
-      <div class="bg-white w-1/2 flex items-center py-3 pr-3 rounded">
+      <div class="bg-white w-1/2 flex items-center py-3 pr-3 rounded shadow-md">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@
         <span class="mr-3 text-slate-800 text-sm font-medium">محبوب ترین</span>
       </div>
 
-      <div class="bg-white w-1/2 flex items-center py-3 pr-3 rounded">
+      <div class="bg-white w-1/2 flex items-center py-3 pr-3 rounded shadow-md">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -79,14 +79,27 @@
     </div>
 
     <!--PRODUCTS--------------------------------------------------------------------- -->
-    <div
-      class="container grid grid-cols-2 gap-x-2 gap-y-9 md:grid-cols-3 lg:grid-cols-4 p-1"
+    <div  x-data="{
+      products:[
+      {id:1,title:'ساعت هوشمند اپل سری 6',price:'۱۲,۳۴۵,۶۷۰ تومان',image:'/assets/images/apple-watch-10-removebg-preview.png'},
+      {id:2,title:'ساعت هوشمند اپل سری 7',price:'۱۵,۳۴۲,۶۷۰ تومان',image:'/assets/images/apple-watch-3-removebg-preview.png'},
+      {id:3,title:'ساعت هوشمند اپل سری 5',price:'۱۳,۳۴۲,۶۷۰ تومان',image:'/assets/images/apple-watch-12-removebg-preview.png'},
+      {id:4,title:'ساعت هوشمند اپل سری 6',price:'۱۰,۳۴۲,۶۷۰ تومان',image:'/assets/images/apple-watch-7-removebg-preview.png'},
+      {id:5,title:'ساعت هوشمند اپل سری 4',price:'۷,۳۴۲,۶۷۰ تومان',image:'/assets/images/apple-watch-11-removebg-preview.png'},
+      {id:6,title:'ساعت هوشمند اپل سری 3',price:'۶,۳۴۲,۶۷۰ تومان',image:'/assets/images/apple-watch-33-removebg-preview.png'}
+      ]
+    }"
+      class="container grid grid-cols-2 gap-x-2 gap-y-9 sm:gap-x-8 sm:gap-y-10  md:grid-cols-3 lg:grid-cols-4 p-1"
     >
-      <div class="bg-white p-2 rounded-md shadow-md">
+    <!-- single product -->
+
+        <template x-for="product in products" :key="product.id">
+          
+      <div class="bg-white p-2 rounded-md shadow-lg">
         <div
-          class="bg-gray-200 flex justify-center items-center mt-2 mb-4 p-8 rounded-md"
+          class="bg-gray-200 flex justify-center items-center mt-2 mb-4 py-4 px-1 sm:px-3 rounded-md  "
         >
-          <img src="/assets/images/apple-watch-6-removebg-preview.png" alt="" />
+          <img :src="product.image" alt="" class="w-full h-40 object-cover sm:h-60 2xl:h-72"/>
         </div>
 
         <!-- description -->
@@ -160,15 +173,14 @@
         </div>
 
         <!-- title -->
-        <div
+        <div  x-text="product.title"
           class="w-full flex items-center mb-2 text-slate-900 text-xs font-bold md:text-base"
         >
-          ساعت هوشمند اپل سری 6
         </div>
-        <div
+        <div  x-text="product.price"
           class="flex justify-center items-center mb-3 text-orange-600 font-medium text-base md:text-xl"
         >
-          ۱۲,۳۴۵,۶۷۰ تومان
+         
         </div>
 
         <hr class="bg-slate-300" />
@@ -180,16 +192,9 @@
           <button>مشاهده و سفارش</button>
         </div>
       </div>
+    </template>
 
-      <div class="bg-blue-200">2</div>
-      <div class="bg-blue-200">3</div>
-      <div class="bg-blue-200">4</div>
-      <div class="bg-blue-200">5</div>
-      <div class="bg-blue-200">6</div>
-      <div class="bg-blue-200">7</div>
-      <div class="bg-blue-200">8</div>
-      <div class="bg-blue-200">9</div>
-      <div class="bg-blue-200">10</div>
+     
     </div>
 
     <script
