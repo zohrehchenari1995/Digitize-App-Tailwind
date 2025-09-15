@@ -91,15 +91,79 @@
 
         <!-- description -->
         <div class="flex justify-between items-center mb-3 w-full">
-          <div class="text-slate-400 font-medium text-sm md:text-lg">اپل</div>
-          <div>color palet</div>
+          <!-- product name -->
+          <div class="text-slate-400 font-medium text-sm md:text-base">اپل</div>
+
+          <!-- color palet -->
+          <div x-data="{color:'red'}" class="flex">
+            <div
+              @click="color='red'" :class="color==='red'?'ring-2 ring-red-400' : '' "
+              class="bg-red-400 w-6 h-6 rounded-full border-2 border-white flex justify-center items-center sm:h-8 sm:w-8"
+            >
+             
+                <svg x-show="color==='red'"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4 sm:size-5 stroke-white"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+           
+            <div
+              @click="color='blue' " :class="color==='blue'?'ring-2 ring-blue-400' : ''"
+              class="bg-blue-400 w-6 h-6 rounded-full border-2 border-white flex justify-center items-center sm:h-8 sm:w-8 -mr-1.5"
+            >
+             <svg x-show="color==='blue'"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4 sm:size-5 stroke-white"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+            
+            </div>
+            <div
+              @click="color='green' "  :class="color=== 'green'? 'ring-2 ring-green-400' : ''"
+              class="bg-green-400 w-6 h-6 rounded-full border-2 border-white flex justify-center items-center sm:h-8 sm:w-8 -mr-1.5"
+            >
+             <svg x-show="color==='green'"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4 sm:size-5 stroke-white"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+            </div>
+          </div>
         </div>
 
         <!-- title -->
         <div
-          class="w-full flex items-center mb-2 text-slate-900 text-xs font-bold md:text-lg"
+          class="w-full flex items-center mb-2 text-slate-900 text-xs font-bold md:text-base"
         >
-          ساعت هوشمند اپل سری 6 
+          ساعت هوشمند اپل سری 6
         </div>
         <div
           class="flex justify-center items-center mb-3 text-orange-600 font-medium text-base md:text-xl"
@@ -109,8 +173,9 @@
 
         <hr class="bg-slate-300" />
 
+        <!-- button -->
         <div
-          class="w-full flex justify-center items-center mt-1  p-1 text-orange-600 font-bold font-base text-sm md:text-lg"
+          class="w-full flex justify-center items-center mt-1 p-1 text-orange-600 font-bold font-base text-sm md:text-lg"
         >
           <button>مشاهده و سفارش</button>
         </div>
@@ -126,5 +191,10 @@
       <div class="bg-blue-200">9</div>
       <div class="bg-blue-200">10</div>
     </div>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.0/dist/cdn.min.js"
+    ></script>
   </body>
 </html>
