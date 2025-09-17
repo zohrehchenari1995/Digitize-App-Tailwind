@@ -78,8 +78,17 @@
       </div>
     </div>
 
-    <!--PRODUCTS--------------------------------------------------------------------- -->
-    <div  x-data="{
+    <div class="grid grid-cols-12 md:gap-8 md:px-1  md:grid-rows-[55px_minmax(500px,_1fr)">
+
+      <!-- SIDEBAR----------------------------------------------------------------- -->
+      <div class="col-span-4 lg:col-span-3 row-span-2 hidden md:block">sidebar</div>
+
+      <!-- SORT SECTION------------------------------------------------------------ -->
+      <div class="col-span-8 lg:col-span-9 hidden md:block">sort menu</div>
+
+      <!-- PRODUCTS SECTION-------------------------------------------------------- -->
+      <div class="col-span-12  md:col-span-8 lg:col-span-9">
+          <div  x-data="{
       products:[
       {id:1,title:'ساعت هوشمند اپل سری 6',price:'۱۲,۳۴۵,۶۷۰ تومان',image:'/assets/images/apple-watch-10-removebg-preview.png'},
       {id:2,title:'ساعت هوشمند اپل سری 7',price:'۱۵,۳۴۲,۶۷۰ تومان',image:'/assets/images/apple-watch-3-removebg-preview.png'},
@@ -89,7 +98,7 @@
       {id:6,title:'ساعت هوشمند اپل سری 3',price:'۶,۳۴۲,۶۷۰ تومان',image:'/assets/images/apple-watch-33-removebg-preview.png'}
       ]
     }"
-      class="container grid grid-cols-2 gap-x-2 gap-y-9 sm:gap-x-8 sm:gap-y-10  md:grid-cols-3 lg:grid-cols-4 p-1"
+      class="container grid grid-cols-2 gap-x-2 gap-y-9 sm:gap-x-8 sm:gap-y-10   lg:grid-cols-4"
     >
     <!-- single product -->
 
@@ -97,7 +106,7 @@
           
       <div class="bg-white p-2 rounded-md shadow-lg">
         <div
-          class="bg-gray-200 flex justify-center items-center mt-2 mb-4 py-4 px-1 sm:px-3 rounded-md  "
+          class="bg-gray-200 flex justify-center items-center mt-2 mb-4 py-4 px-1  sm:px-3 rounded-md"
         >
           <img :src="product.image" alt="" class="w-full h-40 object-cover sm:h-60 2xl:h-72"/>
         </div>
@@ -174,7 +183,7 @@
 
         <!-- title -->
         <div  x-text="product.title"
-          class="w-full flex items-center mb-2 text-slate-900 text-xs font-bold md:text-base"
+          class="w-full flex items-center mb-2 text-slate-900 text-xs font-bold sm:text-base"
         >
         </div>
         <div  x-text="product.price"
@@ -196,6 +205,13 @@
 
      
     </div>
+      </div>
+
+    </div>
+
+
+
+  
 
     <script
       defer
